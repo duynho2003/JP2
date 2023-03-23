@@ -35,6 +35,6 @@ class TestArray extends MyArray<String> {
     }
 }
 
-class TestArray2<T> extends MyArray<T> {
-
-}
+//class TestArray2<T> extends MyArray<T> {
+//
+//}
