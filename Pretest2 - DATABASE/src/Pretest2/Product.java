@@ -2,31 +2,38 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package vn.aptech;
+package Pretest2;
+
+import java.util.Scanner;
+
 /**
  *
  * @author Admin
  */
-public class Customer {
-
+public class Product {
     private int id;
     private String name;
-    private String email;
-
-    public Customer() {
-    }
-
-    public Customer(int id, String name, String email) {
+    private int price;
+    private int qoh;
+    
+    public Product(){
+}
+    public Product(int id, String name, int price, int qoh) {
         this.id = id;
         this.name = name;
-        this.email = email;
+        this.price = price;
+        this.qoh = qoh;
     }
-
+    
     @Override
     public String toString() {
-        return String.format("%d-%s-%s", id, name, email);
+        return String.format("%d-%s-%d-%d", id, name, price, qoh);
     }
-
+    
+    public void input() {
+        Scanner sc = new Scanner(System.in);
+        String prd;
+    }
     /**
      * @return the id
      */
@@ -56,16 +63,30 @@ public class Customer {
     }
 
     /**
-     * @return the email
+     * @return the price
      */
-    public String getEmail() {
-        return email;
+    public int getPrice() {
+        return price;
     }
 
     /**
-     * @param email the email to set
+     * @param price the price to set
      */
-    public void setEmail(String email) {
-        this.email = email;
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    /**
+     * @return the qoh
+     */
+    public int getQoh() {
+        return qoh;
+    }
+
+    /**
+     * @param qoh the qoh to set
+     */
+    public void setQoh(int qoh) {
+        this.qoh = qoh;
     }
 }

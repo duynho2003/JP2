@@ -17,40 +17,40 @@ import java.util.stream.Collectors;
  * @author Admin
  */
 public class BookList {
+
     List<Book> books = new ArrayList<>();
-    
-    public void addBook(Book b){
+
+    public void addBook(Book b) {
         books.add(b);
     }
-    
+
     public void print() {
         books.forEach(System.out::println);
     }
-    
+
     public List<Book> findByName(String name) {
         return books.stream()
-                .filter(b->b.getName().contains(name))
+                .filter(b -> b.getName().contains(name))
                 .collect(Collectors.toList());
     }
-    
+
     public void saveFile() {
         try {
-        ObjectOutputStream out = new ObjectOutputStream(
-                new FileOutputStream("book.dat"));
-        out.writeObject(books);
-        out.close();
+            ObjectOutputStream out = new ObjectOutputStream(
+                    new FileOutputStream("book.dat"));
+            out.writeObject(books);
+            out.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
     }
-    
+
     public void loadFile() {
         try {
             books.clear(); // xoa du lieu cu
             ObjectInputStream in = new ObjectInputStream(
                     new FileInputStream("book.dat"));
-            List<Book> result = (List<Book>)in.readObject();
+            List<Book> result = (List<Book>) in.readObject();
             in.close();
             books.addAll(result);
         } catch (Exception e) {

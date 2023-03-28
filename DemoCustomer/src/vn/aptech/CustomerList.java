@@ -51,17 +51,28 @@ public class CustomerList {
                 String name = sc.nextLine();
                 Matcher mat = pattern.matcher(name);
                 if (mat.matches()) {
-                    cust.setEmail(name);
+                    cust.setName(name);
                     break;
                 }
             } catch (Exception ex) {
             }
-             System.out.println("Name has 2 characters or more");
+            System.out.println("Name has 2 characters or more");
         }
-
-        System.out.println("Input Email: ");
-        String email = sc.nextLine();
-        cust.setEmail(email);
+        String mpattern = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$";
+        Pattern patternMail = Pattern.compile(mpattern);
+        while (true) {
+            try {
+                System.out.println("Input Email: ");
+                String email = sc.nextLine();
+                Matcher mat = patternMail.matcher(email);
+                if (mat.matches()) {
+                    cust.setEmail(email);
+                    break;
+                }
+            } catch (Exception ex) {
+            }
+            System.out.println("Email must correct!");
+        }
         // dua vao list
         customers.add(cust);
     }
@@ -86,15 +97,13 @@ public class CustomerList {
             for(Customer c : customers) {
                 out.println(c);
             }
-            */
+             */
             out.close();
         } catch (Exception ex) {
             ex.printStackTrace();
         }
     }
 
-    
-    
     public void load() {
         try {
             customers.clear(); //xoa du lieu cu

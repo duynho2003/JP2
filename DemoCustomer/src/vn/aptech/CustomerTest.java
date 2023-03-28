@@ -29,6 +29,15 @@ public class CustomerTest {
                     list.add();
                     break;
                 }
+                case 2: {
+                    list.print();
+                }
+                case 3: {
+                    list.save();
+                }
+                case 4: {
+                    list.load();
+                }
                 default: break;
             }
         }
