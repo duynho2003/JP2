@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="PropertiesConfig">
+    <Appenders>
+        <File name="fileappender" fileName="applogs/logfile.log" >
+        <!--Console name="consoleappender" target="STDOUT">-->
+            <PatternLayout>
+                <pattern>
+                    %d{yyyy-MM-dd HH:mm:ss.SSS} %msg%n
+                </pattern>>
+            </PatternLayout>
+        <!--</Console>-->
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="DEBUG">
+            <AppenderRef ref="fileappender"/>
+        </Root>
+    </Loggers>
+</Configuration>

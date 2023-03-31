@@ -1,0 +1,6 @@
+2023-03-31 15:16:50.424 Hello, logger
+2023-03-31 15:16:50.431 Hello, logger, info
+2023-03-31 15:16:50.431 Hello logger, error
+2023-03-31 15:27:55.085 Hello, logger
+2023-03-31 15:27:55.092 Hello, logger, info
+2023-03-31 15:27:55.092 Hello logger, error
