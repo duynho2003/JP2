@@ -41,7 +41,7 @@ public class Book {
     
     @Override
     public String toString() {
-        return String.format("%s-%s-%d-$s", bookId, title, price, 
+        return String.format("%s-%s-%d-%s", bookId, title, price, 
                 standardizedPublisher());
     }
     
