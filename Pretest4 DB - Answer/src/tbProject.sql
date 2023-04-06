@@ -7,4 +7,4 @@ CREATE TABLE tbProject (
 	[value] integer,
 	completed bit
 )
-SELECT * FROM javaDB
+SELECT * FROM tbProject
