@@ -95,6 +95,5 @@ public class Product {
      */
     public void setQoh(int qoh) {
         this.qoh = qoh;
-    }
-    
+    } 
 }

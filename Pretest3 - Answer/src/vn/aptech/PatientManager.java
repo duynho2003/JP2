@@ -34,7 +34,7 @@ public class PatientManager {
         String sIdPat = "BN\\d\\d\\d\\d";
         Pattern idPat = Pattern.compile(sIdPat);
         while (true) {
-            System.out.println("Input Patient Id:");
+            System.out.println("Input Patient Id: ");
             String s = sc.nextLine();
             Matcher mat = idPat.matcher(s);
             if (mat.matches()) {
@@ -43,12 +43,11 @@ public class PatientManager {
             }
             System.out.println("Invaild Patient Id, please try again.");
         }
-
         System.out.println("Input Name: ");
         patient.setName(sc.nextLine());
-        System.out.println("Input Gender (male/female): ");
+        System.out.println("Input Gender (Male/Female): ");
         String s = sc.nextLine();
-        if (s.equals("male")) {
+        if (s.equals("Male")) {
             patient.setGender(true);
         } else {
             patient.setGender(false);
