@@ -1,23 +1,23 @@
 R1: Create a table Flight in database named AirportDB with the structure:
-AircraftCode varchar(10) identifies each aircraft
-Source varchar(30) stores the source of the flight
-Destination varchar(30) stores the destination of the flight
-DepTime DateTime store the departure time of the flight
-JourneyHrs int stores the toal journey hours
+    AircraftCode varchar(10) identifies each aircraft
+    Source varchar(30) stores the source of the flight
+    Destination varchar(30) stores the destination of the flight
+    DepTime DateTime store the departure time of the flight
+    JourneyHrs int stores the toal journey hours
 
 
 R2. Create class Flight in entites package which used tp store all details of the Flight:
-AirCraftCode, Source, Destination, DepTime, JourneyHrs.
-Define instance variables to present flight details with appropriate data type/
-Method input(): input data for a Flight
-All fiels: not blank
-JourneyHrs: must be greater than 0 and less than 20
-Override method toString(): return a string presents information of a flight.
+    AirCraftCode, Source, Destination, DepTime, JourneyHrs.
+    Define instance variables to present flight details with appropriate data type/
+    Method input(): input data for a Flight
+    All fiels: not blank
+    JourneyHrs: must be greater than 0 and less than 20
+    Override method toString(): return a string presents information of a flight.
 
 R3: Java Main Class FlightService in serivce package which used to store and manage the flights:
-Method createFlight() (Flight newFlight): to add a new flight into database
-Method findAll(): to display list of flights, order by departure time.
-Method updateFlight(Flight editFlight): update journey hours of a flight.
+    Method createFlight() (Flight newFlight): to add a new flight into database
+    Method findAll(): to display list of flights, order by departure time.
+    Method updateFlight(Flight editFlight): update journey hours of a flight.
 
 This application needs to provide following functions via a menu:
 1. Create new flight
