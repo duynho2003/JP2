@@ -9,7 +9,7 @@ R1: Create a table Flight in database named AirportDB with the structure:
 R2. Create class Flight in entites package which used tp store all details of the Flight:
     AirCraftCode, Source, Destination, DepTime, JourneyHrs.
     Define instance variables to present flight details with appropriate data type/
-    Method input(): input data for a Flight
+    Method input(): input data for a Flight:
     All fiels: not blank
     JourneyHrs: must be greater than 0 and less than 20
     Override method toString(): return a string presents information of a flight.
